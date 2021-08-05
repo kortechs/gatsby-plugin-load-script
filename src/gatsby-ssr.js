@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const onRenderBody = ({setPostBodyComponents}, pluginOptions) => {
+export const onRenderBody = ({setHeadComponents}, pluginOptions) => {
   const {
     plugins, // internal to gatsby
     disable, // should we disable the plugin ?
@@ -47,7 +47,7 @@ export const onRenderBody = ({setPostBodyComponents}, pluginOptions) => {
     }
   })
   if (!disable)
-    setPostBodyComponents([
+    setHeadComponents([
       <script
         key={src}
         dangerouslySetInnerHTML={{
